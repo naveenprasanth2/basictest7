@@ -37,8 +37,9 @@ public class AllTest {
                 return null;
             }
         });
-//        pom.getCountriesDropdown().stream().filter(x -> x.findElement(By.xpath("div")).getText().equalsIgnoreCase("india"))
-//                .findFirst().ifPresent(WebElement::click);
+        pom.setCountriesDropdown(driver.findElements(By.xpath("//li[@class='ui-menu-item']")));
+        pom.getCountriesDropdown().stream().filter(x -> x.findElement(By.xpath("div")).getText().equalsIgnoreCase("india"))
+                .findFirst().ifPresent(WebElement::click);
         driver.manage().logs().get(LogType.DRIVER).getAll().stream().map(LogEntry::getMessage).forEach(System.out::println);
         driver.quit();
 

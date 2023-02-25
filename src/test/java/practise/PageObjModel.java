@@ -1,7 +1,6 @@
 package practise;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,8 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-@Getter
-@Setter
+@Data
 public class PageObjModel {
 
     public PageObjModel(WebDriver driver){
